@@ -21,4 +21,3 @@ resource "aws_nat_gateway" "main_nat_a_gateway" {
   }
   depends_on = [aws_internet_gateway.gateway]
 }
-

@@ -12,4 +12,3 @@ resource "aws_subnet" "public_a" {
     ManagedBy   = "Terraform"
   }
 }
-
