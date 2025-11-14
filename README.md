@@ -1,1 +1,1 @@
-# IaC-clooud-app
+# IaC-cloud-app
