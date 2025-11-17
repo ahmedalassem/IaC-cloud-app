@@ -1,11 +1,13 @@
 resource "aws_s3_bucket" "main_s3" {
-    bucket = "main-s3-bucket"
-  
-    tags = {
-      Name        = var.bucket_name
-      Environment = var.environment
-    }
+  bucket = var.bucket_name
+
+  tags = {
+    Name        = var.bucket_name
+    Environment = var.environment
+    Project     = var.project_name
+    ManagedBy   = "Terraform"
   }
+}
 
 resource "aws_s3_bucket_public_access_block" "s3_block" {
   bucket = aws_s3_bucket.main_s3.id
