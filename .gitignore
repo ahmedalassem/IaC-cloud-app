@@ -1,13 +1,5 @@
-# Stakpak local files
+.terraform/
+.terraform.lock.hcl.backup*
+*.tfstate
+*.tfstate.*
 .stakpak
-.tfstate
-.tfstate.backup
-.terraform
-.terraform.lock.hcl
-.terraform.lock.hcl.backup
-.terraform.lock.hcl.backup.backup
-.terraform.lock.hcl.backup.backup.backup
-.terraform.lock.hcl.backup.backup.backup.backup
-.terraform.lock.hcl.backup.backup.backup.backup.backup
-.terraform.lock.hcl.backup.backup.backup.backup.backup.backup
-./.terraform
