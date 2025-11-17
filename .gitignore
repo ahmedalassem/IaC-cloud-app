@@ -10,4 +10,4 @@
 .terraform.lock.hcl.backup.backup.backup.backup
 .terraform.lock.hcl.backup.backup.backup.backup.backup
 .terraform.lock.hcl.backup.backup.backup.backup.backup.backup
-/.terraform
+./.terraform
