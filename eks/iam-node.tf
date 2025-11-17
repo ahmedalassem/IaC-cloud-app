@@ -1,4 +1,3 @@
-# IAM Role for EKS Auto Mode Nodes
 resource "aws_iam_role" "node" {
   name = "${var.cluster_name}-node-role"
 
@@ -23,7 +22,6 @@ resource "aws_iam_role" "node" {
   }
 }
 
-# Attach required policies for worker nodes
 resource "aws_iam_role_policy_attachment" "node_policy" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"
   role       = aws_iam_role.node.name

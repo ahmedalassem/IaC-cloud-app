@@ -6,20 +6,10 @@ resource "aws_eks_cluster" "main" {
   vpc_config {
     subnet_ids              = var.subnet_ids
     endpoint_private_access = true
-    endpoint_public_access  = false  # Best practice: Disable public access for security
-    # If you need public access, uncomment the line below and restrict to specific CIDRs
-    # public_access_cidrs    = ["YOUR_IP/32"]  # Restrict to your IP address
+    endpoint_public_access  = false  
     security_group_ids      = [aws_security_group.cluster.id]
   }
 
-  # Enable EKS Auto Mode
-  compute_config {
-    enabled       = true
-    node_pools    = ["general-purpose"]
-    node_role_arn = aws_iam_role.node.arn
-  }
-
-  # Enable cluster logging
   enabled_cluster_log_types = ["api", "audit", "authenticator", "controllerManager", "scheduler"]
 
   tags = {

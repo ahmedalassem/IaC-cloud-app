@@ -46,6 +46,54 @@ variable "private_subnet_a_cidr" {
   default     = "10.0.2.0/24"
 }
 
+variable "pub_subnet_b" {
+  description = "tag for the availability_zone b public subnet"
+  type        = string
+  default     = "public-subnet-b"
+}
+
+variable "prv_subnet_b" {
+  description = "tag for the availability_zone b private subnet"
+  type        = string
+  default     = "private-subnet-b"
+}
+
+variable "public_subnet_b_cidr" {
+  description = "CIDR block for public subnet B"
+  type        = string
+  default     = "10.0.3.0/24"
+}
+
+variable "private_subnet_b_cidr" {
+  description = "CIDR block for private subnet B"
+  type        = string
+  default     = "10.0.4.0/24"
+}
+
+variable "node_instance_type" {
+  description = "Instance type for EKS worker nodes"
+  type        = string
+  default     = "t3.small"
+}
+
+variable "node_desired_size" {
+  description = "Desired number of worker nodes"
+  type        = number
+  default     = 3
+}
+
+variable "node_min_size" {
+  description = "Minimum number of worker nodes"
+  type        = number
+  default     = 3
+}
+
+variable "node_max_size" {
+  description = "Maximum number of worker nodes"
+  type        = number
+  default     = 3
+}
+
 variable "internet_gateway" {
   description = "internet gateway description"
   type        = string
@@ -61,7 +109,7 @@ variable "environment" {
 variable "bucket_name" {
     description = "s3 bucket name"
     type = string
-    default = "main_s3_bucket"
+    default = "assemsamirziad"
 }
 
 variable "cluster_name" {

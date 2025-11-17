@@ -38,6 +38,26 @@ variable "private_subnet_a_cidr" {
   type        = string
 }
 
+variable "pub_subnet_b" {
+  description = "Tag for the availability_zone b public subnet"
+  type        = string
+}
+
+variable "prv_subnet_b" {
+  description = "Tag for the availability_zone b private subnet"
+  type        = string
+}
+
+variable "public_subnet_b_cidr" {
+  description = "CIDR block for public subnet B"
+  type        = string
+}
+
+variable "private_subnet_b_cidr" {
+  description = "CIDR block for private subnet B"
+  type        = string
+}
+
 variable "internet_gateway" {
   description = "Internet gateway description"
   type        = string

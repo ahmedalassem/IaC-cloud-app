@@ -1,4 +1,3 @@
-# Security Group for EKS Cluster
 resource "aws_security_group" "cluster" {
   name        = "${var.cluster_name}-cluster-sg"
   description = "Security group for EKS cluster control plane"
@@ -12,7 +11,6 @@ resource "aws_security_group" "cluster" {
   }
 }
 
-# Allow cluster to communicate with worker nodes
 resource "aws_security_group_rule" "cluster_egress" {
   type              = "egress"
   from_port         = 0
@@ -23,7 +21,6 @@ resource "aws_security_group_rule" "cluster_egress" {
   description       = "Allow all outbound traffic"
 }
 
-# Allow worker nodes to communicate with cluster API
 resource "aws_security_group_rule" "cluster_ingress_workstation_https" {
   type              = "ingress"
   from_port         = 443
