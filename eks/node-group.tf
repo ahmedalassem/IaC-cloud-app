@@ -30,6 +30,7 @@ resource "aws_eks_node_group" "ubuntu_nodes" {
     aws_iam_role_policy_attachment.node_policy,
     aws_iam_role_policy_attachment.cni_policy,
     aws_iam_role_policy_attachment.ecr_read_only,
+    aws_iam_role_policy_attachment.ssm_managed_instance_core,
     aws_eks_cluster.main
   ]
 }
